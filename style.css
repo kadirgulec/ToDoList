@@ -1,6 +1,7 @@
 :root{
     --headerBackground : black;
     --headerColor: white;
+    --bodyColor : rgb(110, 110, 110);
     --listItemDark: hsl(0, 0%, 65%);
     --listItemLight: hsl(0, 0%, 90%);
     --listItemDarker: hsl(0, 0%, 30%);
@@ -8,7 +9,9 @@
 *{
     padding: 0;
 }
-
+body{
+    background-color: var(--bodyColor);
+}
 header{
     display: flex;
     flex-direction: column;
@@ -94,4 +97,11 @@ textarea{
 }
 li span{
     cursor: pointer;
+}
+
+/* last added mode button */
+.modesButton{
+    position: relative;
+    top: -50px;
+    right: -25em;
 }

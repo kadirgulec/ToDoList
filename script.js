@@ -37,3 +37,18 @@ function overLine(){
     }
     console.log("clicked");
 }
+var cssRoot = document.querySelector(":root");
+function changeMode(){
+    let button = document.querySelector(".modesButton");
+    if (button.innerHTML == "Light Mode"){
+        cssRoot.style.setProperty('--headerBackground','white');
+        cssRoot.style.setProperty('--headerColor','black');
+        cssRoot.style.setProperty('--bodyColor','white');
+        button.innerHTML= "Dark Mode";
+    }else{
+        cssRoot.style.setProperty('--headerBackground','black');
+        cssRoot.style.setProperty('--headerColor','white');
+        cssRoot.style.setProperty('--bodyColor','gray');
+        button.innerHTML= "Light Mode";
+    }
+}
