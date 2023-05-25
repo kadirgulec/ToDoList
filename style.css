@@ -1,0 +1,73 @@
+:root{
+    --headerBackground : black;
+    --headerColor: white;
+    --listItemDark: hsl(0, 0%, 65%);
+    --listItemLight: hsl(0, 0%, 90%);
+    --listItemDarker: hsl(0, 0%, 30%);
+}
+*{
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--headerBackground);
+    color: var(--headerColor);
+}
+.addingArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+header button {
+    width: 10%;
+    min-width: 5em;
+    height: 40%;
+    margin-left: 20px;
+}
+ul li{
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--listItemLight);
+    padding: 5px;
+    padding-left: 15px;
+    list-style: none;
+    text-transform: capitalize;
+}
+
+ul li:nth-child(odd){
+    background-color: var(--listItemDark);
+   
+}
+
+ul li.checked{
+    background-color: var(--listItemDarker);
+    text-decoration: line-through;
+    
+}
+
+ul li.checked::after{
+    content:"";
+    display: inline-block;
+    margin-left: 15px;
+    color: white ;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    width: 5px;
+    height: 13px;
+    transform: rotate(45deg); 
+}
+
+.deleteIcon{
+    margin-right: 1em;
+}
+.deleteIcon:hover{
+    color: rgb(255, 0, 0);
+}
