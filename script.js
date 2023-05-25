@@ -2,7 +2,16 @@ function addItem(){
     let item = document.querySelector("#addSomething");
     let list = document.querySelector(`ul`);
     list.innerHTML += `<li><span class="deleteIcon" onclick="deleteItem()"><i class="fa-sharp fa-solid fa-trash"></i></span><span onclick="overLine()" class="itemText">${item.value}</span></li>` 
+    item.value = "";
 }
+
+//trigger addItem() if enter is clicked
+let textarea = document.getElementById("addSomething");
+textarea.addEventListener("keypress", ({key}) => {
+    if (key == "Enter"){
+        addItem();
+    }
+})
 
 //to delete item (actually to hide them :))
  
